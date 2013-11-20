@@ -12,9 +12,9 @@
 
 	<default remote="openembedded" revision="master"  />
 
-	<project name="bitbake"  path="bitbake" revision="a66ee0994645aa5658b2f5ea134ed17d89f8751a"/ upstream="refs/head/master">
-	<project name="oe-core"  path="oe-core" revision="0eb947454e1c92467283e6f1adeca67c7c57698b"/ upstream="refs/head/master">
-	<project name="meta-oe"  path="meta-oe" revision="e31bac96c090ab259644319238b5f84615b6737a"/ upstream="refs/head/master">
+	<project name="bitbake"  path="bitbake" revision="a66ee0994645aa5658b2f5ea134ed17d89f8751a" upstream="refs/head/master"/>
+	<project name="oe-core"  path="oe-core" revision="0eb947454e1c92467283e6f1adeca67c7c57698b" upstream="refs/head/master"/>
+	<project name="meta-oe"  path="meta-oe" revision="e31bac96c090ab259644319238b5f84615b6737a" upstream="refs/head/master"/>
 
 	<project name="meta-xilinx" remote="balister" path="meta-xilinx" revision="d386c81634b39b23242e33f7ecea77f521c120a5"  upstream="refs/head/working-branch"/>
 
