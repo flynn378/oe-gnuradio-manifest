@@ -12,13 +12,13 @@
 
 	<default remote="openembedded" revision="master"  />
 
-	<project name="bitbake"  path="bitbake" revision="a66ee0994645aa5658b2f5ea134ed17d89f8751a"/>
+	<project name="bitbake"  path="bitbake" revision="master:a66ee0994645aa5658b2f5ea134ed17d89f8751a"/>
 	<project name="oe-core"  path="oe-core" revision="master:0eb947454e1c92467283e6f1adeca67c7c57698b"/>
-	<project name="meta-oe"  path="meta-oe" revisions="master:e31bac96c090ab259644319238b5f84615b6737a"/>
+	<project name="meta-oe"  path="meta-oe" revision="master:e31bac96c090ab259644319238b5f84615b6737a"/>
 
 	<project name="meta-xilinx" remote="balister" path="meta-xilinx" revision="working-branch:d386c81634b39b23242e33f7ecea77f521c120a5" />
 
-	<project name="meta-ettus" remote="balister" path="meta-ettus" revision="b9b4fae93de1508dc5025bf2ad9c5d4b9ab601da"/>
+	<project name="meta-ettus" remote="balister" path="meta-ettus" revision="master:b9b4fae93de1508dc5025bf2ad9c5d4b9ab601da"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="master:eaab87ec7b9f7cb7029f6f8dca4e05097852072e"/>
 
 </manifest>
