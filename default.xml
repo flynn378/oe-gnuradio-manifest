@@ -18,7 +18,7 @@
 
 	<project name="meta-xilinx" remote="balister" path="meta-xilinx" revision="d386c81634b39b23242e33f7ecea77f521c120a5"  upstream="refs/head/working-branch"/>
 
-	<project name="meta-ettus" remote="balister" path="meta-ettus" revision="b9b4fae93de1508dc5025bf2ad9c5d4b9ab601da"/ upstream="refs/head/master">
+	<project name="meta-ettus" remote="balister" path="meta-ettus" revision="b9b4fae93de1508dc5025bf2ad9c5d4b9ab601da" upstream="refs/head/master"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="eaab87ec7b9f7cb7029f6f8dca4e05097852072e" upstream="refs/head/master"/>
 
 </manifest>
