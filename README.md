@@ -13,6 +13,10 @@ single *manifest* file.  Tell repo to fetch a manifest from this repository and
 it will fetch the git repositories specified in the manifest and, by doing so,
 setup an OpenEmbedded build environment for you!
 
+Daisy is the name of the April 2014 Yocto Project release. For normal work
+use the release branch for best results. Elite hacker dudes can work on 
+master.
+
 Getting Started
 ---------------
 1.  Install Repo.
@@ -38,29 +42,13 @@ Getting Started
 
     Tell Repo where to find the manifest
 
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git -b stable
+        $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git -b fido
 
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now
     contain a .repo directory where files such as the manifest will be kept.
-    ***
-    **Note**
-    You can use the **-b** switch to specify the branch of the repository
-    to use.  I develop on master so it might be iffy at times. Use the
-    "stable" branch fornormal work. 
-
-    The **-m** switch selects the manifest file (default is *default.xml*).
-
-    To test out the bleeding edge, type:
-
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git
-    
-    To get back to the known stable version, type:
-
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest -b stable
 
     To learn more about repo, look at http://source.android.com/source/version-control.html 
-    ***
 
 3.  Fetch all the repositories.
 
@@ -72,7 +60,7 @@ Getting Started
 4.  Initialize the OpenEmbedded Environment. This assumes you created the oe-core directory
     in your home directory.
 
-        $ TEMPLATECONF=`pwd`/meta-ettus/common/conf source ./oe-core/oe-init-build-env ./build ./bitbake
+        $ TEMPLATECONF=`pwd`/meta-sdr/conf source ./oe-core/oe-init-build-env ./build ./bitbake
 
     This copies default configuration information into the build/conf*
     directory and sets up some environment variables for OpenEmbedded.  You may
@@ -84,7 +72,7 @@ Getting Started
     do an awful lot of compilation so make sure you have plenty of space (25GB
     minimum). Go drink some beer.
 
-        $ export MACHINE="zedboard-zynq7" (default is ettus-e1xx)
+        $ export MACHINE="zedboard-zynq7" (default is ettus-e300)
         $ bitbake gnuradio-dev-image
 
     If everything goes well, you should have a compressed root filesystem
@@ -101,9 +89,9 @@ Getting Started
     Run:
 
         $ export MACHINE="zedboard-zynq7" (only if MACHINE is not already set)
-        $ bibake -c populate_sdk gnuradio-dev-image
+        $ bitbake -c populate_sdk gnuradio-dev-image
 
-    When this completes the sdk is in ./build/deploy/imaghes/sdk as an .sh file
+    When this completes the sdk is in ./tmp-eglibc/deploy/sdk/ as an .sh file
     you copy to the machine you want to cross compile on and run the file.
     It will default to installing the sdk in /usr/local, and you can ask it to
     install anywhere you have write access to.
@@ -153,4 +141,15 @@ Make your changes (and contribute them back if they are generally useful :) ),
 and then re-initialize your repo client
 
     $ repo init -u <file:///path/to/your/git/repository.git>
+
+Known Good Machines
+-------------------
+
+These machines have been tested:
+
+ zedboard-zynq7
+ ettus-e1xx (need to use kernel+modules from official image)
+ imx6sabre-lite
+
+Please send success stories to philip@balister.org.
 
